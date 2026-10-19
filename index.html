@@ -102,5 +102,13 @@
         section + ' सेक्शन तैयार है। वास्तविक API कनेक्शन अभी बाकी है।</p>';
     }
   </script>
+<div id="contacts-box" style="display:none; padding:15px; background:white; border-radius:12px; margin-top:12px;">
+  <h3>नया Contact जोड़ें</h3>
+  <input id="customer-name" placeholder="ग्राहक का नाम" style="padding:12px; width:100%; margin-bottom:10px;">
+  <input id="customer-phone" placeholder="WhatsApp नंबर" type="tel" style="padding:12px; width:100%; margin-bottom:10px;">
+  <button onclick="addContact()">Contact सेव करें</button>
+  <ul id="contact-list"></ul>
+</div>
+
 </body>
 </html>
