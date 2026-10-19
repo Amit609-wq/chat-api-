@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat API Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f6fa;
+      color: #172033;
+    }
+    header {
+      background: #102a43;
+      color: white;
+      padding: 20px;
+    }
+    header h2 { margin: 0 0 6px; }
+    .container { padding: 18px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 17px 12px;
+      box-shadow: 0 2px 8px #102a4310;
+    }
+    .card h3 { font-size: 15px; margin: 0 0 10px; }
+    .card p { color: #138653; margin: 0; font-weight: bold; }
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 14px 8px;
+      border: 0;
+      border-radius: 9px;
+      background: #e2f7eb;
+      color: #087443;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    #details {
+      margin-top: 18px;
+      background: white;
+      padding: 16px;
+      border-radius: 12px;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Chat API</h2>
+    <div>WhatsApp Business Dashboard</div>
+  </header>
+
+  <main class="container">
+    <h3>Dashboard Overview</h3>
+    <div class="cards">
+      <div class="card">
+        <h3>Contacts</h3><p>0 Customers</p>
+      </div>
+      <div class="card">
+        <h3>Messages</h3><p>0 Messages</p>
+      </div>
+      <div class="card">
+        <h3>Templates</h3><p>Manage</p>
+      </div>
+      <div class="card">
+        <h3>Campaigns</h3><p>Manage</p>
+      </div>
+    </div>
+
+    <h3>Manage Your Business</h3>
+    <div class="menu">
+      <button onclick="show('Contacts')">👥 Contacts</button>
+      <button onclick="show('Messages')">💬 Messages</button>
+      <button onclick="show('Templates')">📄 Templates</button>
+      <button onclick="show('Automation')">⚙️ Automation</button>
+      <button onclick="show('Campaigns')">📣 Campaigns</button>
+      <button onclick="show('Meta Ads')">📊 Meta Ads</button>
+    </div>
+
+    <div id="details">
+      Welcome! अपना Chat API Dashboard चुनें।
+    </div>
+  </main>
+
+  <script>
+    function show(section) {
+      document.getElementById('details').innerHTML =
+        '<h3>' + section + '</h3><p>' +
+        section + ' सेक्शन तैयार है। वास्तविक API कनेक्शन अभी बाकी है।</p>';
+    }
+  </script>
+</body>
+</html>
